@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Example using JSON</title>
+  </head>
+  <body>
+    <div id="demo"></div>
+    <!-- <script>
+        var myObj = {
+            "name":"irum",
+            "age": 25,
+            "car" : null
+        }; 
+        // alert(myObj.name);
+        // alert(myObj.age);
+        // alert(myObj.car);
+
+        // for(x in myObj) {
+        //     myObj.x
+        //     alert(myObj.x);
+        // }
+
+        var values = "";
+        for(x in myObj) {
+            values += myObj[x] + " ";
+        }
+
+        document.getElementById("demo").innerHTML = values;
+    </script> -->
+
+    <!-- <script>
+
+        // Nesting JSON objects
+         var myObj = {
+            "name":"irum",
+            "age": 25,
+            "cars" : {
+                "car1":"Suzuki",
+                "car2":"Mehran",
+                "car3":"Audi",
+
+            }
+        }; 
+        var data = " " + myObj.name + " whose age is " + myObj.age + " holds these cars. ";
+        data += myObj.cars.car1 + " " + myObj.cars.car2 + " " + myObj.cars.car3 + " "  ;
+        
+
+        document.getElementById("demo").innerHTML = data;
+   
+    </script> -->
+
+    <!-- <script>
+      // Array
+      var myObj = {
+        name: ["Miss.", "Irum", "Jafar", "Zaidi"],
+        age: 25,
+        // cars: {
+        //   car1: "Suzuki",
+        //   car2: "Mehran",
+        //   car3: "Audi",
+        // },
+        cars: [         "Suzuki",
+           "Mehran",
+           "Audi",
+      ],
+      };
+      //   var data =
+      //     " " + myObj.name + " whose age is " + myObj.age + " holds these cars. ";
+      var data =
+        " " + myObj.name[1] + " whose age is " + myObj.age + " holds these cars. ";
+    //   data +=
+    //     myObj.cars[0] + " " + myObj.cars[1] + " " + myObj.cars[2] + " ";
+    for (i in myObj.cars){  
+    data +=
+        myObj.cars[i] + " ";
+    }
+      document.getElementById("demo").innerHTML = data;
+    </script> -->
+
+    <!-- <script>
+        var myCars = ["Suzuki", "Mehran", "Audi", ]
+        // Array
+        var myObj = {
+          name: ["Miss.", "Irum", "Jafar", "Zaidi"],
+          age: 25,
+        
+          cars: myCars,
+        };   " " + myObj.name + " whose age is " + myObj.age + " holds these cars. ";
+        var data =
+          " " + myObj.name[1] + " whose age is " + myObj.age + " holds these cars. ";
+      for (i in myObj.cars){  
+      data +=
+          myObj.cars[i] + " ";
+      }
+        document.getElementById("demo").innerHTML = data;
+      </script> -->
+
+    <!-- <script>
+      // 7. Nested Arrays as part of JSON object
+      // array of json objects
+      var myCars = [
+        { name: "ford", modal: ["1990", "1995", "1999"] },
+        { name: "BMW", modal: ["1991", "1996", "19991"] },
+        { name: "Audi", modal: ["1992", "1997", "19992"] },
+      ];
+
+      // Array
+      var myObj = {
+        name: "Irum",
+        age: 25,
+        cars: myCars,
+      };
+
+      var data =
+        myObj.name + " whose age is " + myObj.age + " holds these cars. ";
+
+      for (i in myObj.cars) {
+        data += "<h3>"+ myObj.cars[i].name + "</h3>";
+        for (j in myObj.cars[i].modal) {
+          data += myObj.cars[i].modal[j] + " ";
+        }
+      }
+
+      document.getElementById("demo").innerHTML = data;
+    </script> -->
+
+    <!-- <script>
+      // 8. JSON.parse() method to get JavaScript object from JSON
+     
+      var myJSONString = '{"name":"Irum", "age":"25", "city":"Lahore City"}'
+
+      var myObj = JSON.parse(myJSONString);
+
+
+      document.getElementById("demo").innerHTML = myObj.name + " " + myObj.age + " "+ myObj.city;
+    </script> -->
+
+    <script>
+      // 9. JSON.stringify() method for converting JavaScript object to JSON data
+
+      var myJSONString = {name:"Irum", age:"25", city:"Lahore City"};
+      
+      var myObj = JSON.stringify(myJSONString);
+      
+      document.getElementById("demo").innerHTML =
+      myObj;
+      
+      // Js Object
+      // var myJSONString = {name:"Irum", age:"25", city:"Lahore City"};
+      // JSON Object
+      // var myJSONString = {"name":"Irum", "age":"25", "city":"Lahore City"};
+    </script>
+  </body>
+</html>
